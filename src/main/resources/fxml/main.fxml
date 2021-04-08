@@ -1,87 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane accessibleRole="COMBO_BOX" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
-            minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #fafafa;"
-            xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="website.haicheng.controller.MainController">
+<AnchorPane accessibleRole="COMBO_BOX" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #fafafa;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="website.haicheng.controller.MainController">
     <Pane prefHeight="600.0" prefWidth="350.0" style="-fx-background-color: #03A9F4;">
         <children>
-            <ImageView fitHeight="250.0" fitWidth="250.0" layoutX="50.0" layoutY="175.0" pickOnBounds="true"
-                       preserveRatio="true">
+            <ImageView fitHeight="250.0" fitWidth="250.0" layoutX="50.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true">
                 <image>
-                    <Image url="@../img/logo.png"/>
+                    <Image url="@../img/logo.png" />
                 </image>
             </ImageView>
-            <ImageView disable="true" fitHeight="32.0" fitWidth="32.0" layoutX="159.0" layoutY="568.0"
-                       pickOnBounds="true" preserveRatio="true">
+            <ImageView disable="true" fitHeight="32.0" fitWidth="32.0" layoutX="159.0" layoutY="568.0" pickOnBounds="true" preserveRatio="true">
                 <image>
-                    <Image url="@../img/GitHub.png"/>
+                    <Image url="@../img/GitHub.png" />
                 </image>
             </ImageView>
         </children>
     </Pane>
     <Label layoutX="400.0" layoutY="50.0" text="类型" textFill="#212121">
         <font>
-            <Font size="18.0"/>
+            <Font size="18.0" />
         </font>
     </Label>
-    <ComboBox fx:id="typeList" layoutX="460.0" layoutY="50.0" prefWidth="250.0" promptText="请选择"
-              style="-fx-background-color: #BDBDBD; -fx-border-radius: s;"
-              visibleRowCount="5"/>
+    <ComboBox fx:id="typeList" layoutX="460.0" layoutY="50.0" prefWidth="250.0" promptText="请选择" style="-fx-background-color: #BDBDBD; -fx-border-radius: s;" visibleRowCount="5" />
     <Label layoutX="400.0" layoutY="120.0" text="主机" textFill="#212121">
         <font>
-            <Font size="18.0"/>
+            <Font size="18.0" />
         </font>
     </Label>
-    <TextField fx:id="host" layoutX="460.0" layoutY="120.0" prefWidth="250.0" style="-fx-background-color: #BDBDBD;"/>
+    <TextField fx:id="host" layoutX="460.0" layoutY="120.0" prefWidth="250.0" style="-fx-background-color: #BDBDBD;" />
     <Label layoutX="400.0" layoutY="190.0" text="端口" textFill="#212121">
         <font>
-            <Font size="18.0"/>
+            <Font size="18.0" />
         </font>
     </Label>
-    <TextField fx:id="port" layoutX="460.0" layoutY="190.0" prefWidth="250.0" style="-fx-background-color: #BDBDBD;"/>
+    <TextField fx:id="port" layoutX="460.0" layoutY="190.0" prefWidth="250.0" style="-fx-background-color: #BDBDBD;" />
     <Label layoutX="400.0" layoutY="260.0" text="用户名" textFill="#212121" AnchorPane.leftAnchor="400.0">
         <font>
-            <Font size="18.0"/>
+            <Font size="18.0" />
         </font>
     </Label>
     <Label layoutX="400.0" layoutY="330.0" text="密码" textFill="#212121">
         <font>
-            <Font size="18.0"/>
+            <Font size="18.0" />
         </font>
     </Label>
     <Label layoutX="400.0" layoutY="400.0" text="路径" textFill="#212121">
         <font>
-            <Font size="18.0"/>
+            <Font size="18.0" />
         </font>
     </Label>
     <Label layoutX="400.0" layoutY="470.0" text="数据库" textFill="#212121">
         <font>
-            <Font size="18.0"/>
+            <Font size="18.0" />
         </font>
     </Label>
-    <TextField fx:id="username" layoutX="460.0" layoutY="260.0" prefWidth="250.0" style="-fx-background-color: #BDBDBD;"
-               AnchorPane.leftAnchor="460.0"/>
-    <TextField fx:id="password" layoutX="460.0" layoutY="330.0" prefWidth="250.0"
-               style="-fx-background-color: #BDBDBD;"/>
-    <TextField layoutX="460.0" layoutY="400.0" prefWidth="250.0" style="-fx-background-color: #BDBDBD;"/>
-    <Button contentDisplay="CENTER" layoutX="535.0" layoutY="525.0" mnemonicParsing="false"
-            onMouseClicked="#buttonClick" prefWidth="100.0"
-            style="-fx-border-color: #FF4081; -fx-background-color: #FF4081; -fx-font-weight: 500px; -fx-border-radius: 4px; -fx-border-width: 1px; -fx-border-style: solid;"
-            text="确定" textAlignment="CENTER" textFill="WHITE">
+    <TextField fx:id="username" layoutX="460.0" layoutY="260.0" prefWidth="250.0" style="-fx-background-color: #BDBDBD;" AnchorPane.leftAnchor="460.0" />
+    <TextField fx:id="password" layoutX="460.0" layoutY="330.0" prefWidth="250.0" style="-fx-background-color: #BDBDBD;" />
+    <TextField layoutX="460.0" layoutY="400.0" prefWidth="250.0" style="-fx-background-color: #BDBDBD;" />
+    <Button contentDisplay="CENTER" layoutX="535.0" layoutY="525.0" mnemonicParsing="false" onAction="#buttonClick" prefWidth="100.0" style="-fx-border-color: #FF4081; -fx-background-color: #FF4081; -fx-font-weight: 500px; -fx-border-radius: 4px; -fx-border-width: 1px; -fx-border-style: solid;" text="确定" textAlignment="CENTER" textFill="WHITE">
         <font>
-            <Font size="19.0"/>
+            <Font size="19.0" />
         </font>
     </Button>
-    <ComboBox fx:id="dbList" layoutX="460.0" layoutY="467.0" prefWidth="250.0" promptText="请选择"
-              style="-fx-background-color: #BDBDBD;">
+    <ComboBox fx:id="dbList" layoutX="460.0" layoutY="467.0" onMouseClicked="#getDb" prefWidth="250.0" promptText="请选择" style="-fx-background-color: #BDBDBD;">
         <opaqueInsets>
-            <Insets/>
+            <Insets />
         </opaqueInsets>
     </ComboBox>
 </AnchorPane>
