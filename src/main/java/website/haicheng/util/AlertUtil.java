@@ -17,6 +17,7 @@ public class AlertUtil {
     public static void alertMessage(String title, String msg) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle(title);
+        alert.setWidth(400);
         alert.setHeaderText(null);
         alert.setContentText(msg);
         alert.showAndWait();

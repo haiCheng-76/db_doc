@@ -510,7 +510,7 @@
                         <w:sz-cs w:val="44"/>
                         <w:lang w:val="EN-US" w:fareast="ZH-CN"/>
                     </w:rPr>
-                    <w:t>title</w:t>
+                    <w:t>数据库文档</w:t>
                 </w:r>
             </w:p>
             <w:p>
@@ -774,7 +774,7 @@
                                         <w:vertAlign w:val="baseline"/>
                                         <w:lang w:val="EN-US" w:fareast="ZH-CN"/>
                                     </w:rPr>
-                                    <w:t>${item.createTime?string('dd.MM.yyyy HH:mm:ss')}</w:t>
+                                    <w:t>${(item.createTime?string('yyyy-MM-dd HH:mm:ss'))!''}</w:t>
                                 </w:r>
                             </w:p>
                         </w:tc>
@@ -1278,7 +1278,7 @@
                                             <w:vertAlign w:val="baseline"/>
                                             <w:lang w:val="EN-US" w:fareast="ZH-CN"/>
                                         </w:rPr>
-                                        <w:t>${fields.key?string('yes', 'no')}</w:t>
+                                        <w:t>${fields.key?string('yes', '')}</w:t>
                                     </w:r>
                                 </w:p>
                             </w:tc>

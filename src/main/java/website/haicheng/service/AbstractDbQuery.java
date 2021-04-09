@@ -42,7 +42,7 @@ public abstract class AbstractDbQuery implements DbQuery {
             TableInfo tableInfo = new TableInfo();
             tableInfo.setTableName(resultSet.getString(tableName()));
             tableInfo.setEngine(resultSet.getString(engine()));
-            tableInfo.setCreateTime(resultSet.getDate(createTime()));
+            tableInfo.setCreateTime(resultSet.getTimestamp(createTime()));
             tableInfo.setTableCharset(resultSet.getString(character()));
             tableInfo.setTableComment(resultSet.getString(tableComment()));
             list.add(tableInfo);
