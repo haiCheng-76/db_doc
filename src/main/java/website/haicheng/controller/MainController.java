@@ -68,15 +68,6 @@ public class MainController implements Initializable {
     @FXML
     private Button gitHubButton;
 
-
-    /**
-     * 加载数据库类型信息
-     */
-    @FXML
-    public void initialize() {
-        typeList.getItems().addAll(DbType.listName());
-    }
-
     /**
      * 点击提交按钮数据
      *
@@ -211,6 +202,7 @@ public class MainController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        typeList.getItems().addAll(DbType.listName());
         ImageView imageView = new ImageView();
         imageView.setImage(new Image("/img/GitHub.png"));
         gitHubButton.setGraphic(imageView);
