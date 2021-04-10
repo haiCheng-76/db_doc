@@ -8,14 +8,16 @@ import cn.hutool.extra.template.Template;
 import cn.hutool.extra.template.TemplateConfig;
 import cn.hutool.extra.template.TemplateEngine;
 import cn.hutool.extra.template.TemplateUtil;
-import com.sun.org.apache.xpath.internal.operations.Or;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
 import website.haicheng.entity.DbConfig;
@@ -25,9 +27,15 @@ import website.haicheng.service.DbQuery;
 import website.haicheng.service.DbQueryFactory;
 import website.haicheng.util.AlertUtil;
 
+import java.awt.*;
 import java.io.File;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.sql.SQLException;
+import java.util.List;
 import java.util.*;
 
 /**
@@ -35,7 +43,7 @@ import java.util.*;
  * @author: 582895699@qq.com
  * @time: 2021/4/5 下午 03:25
  */
-public class MainController {
+public class MainController implements Initializable {
     @FXML
     private TextField host;
 
@@ -58,7 +66,7 @@ public class MainController {
     private ComboBox<String> dbList;
 
     @FXML
-    private AnchorPane pane;
+    private Button gitHubButton;
 
 
     /**
@@ -195,7 +203,21 @@ public class MainController {
             directoryChooser.setTitle("选择文件夹");
             File directory = directoryChooser.showDialog(new Stage());
             String path = directory.getAbsolutePath();
-            dirName.setText(path);
+            if (StrUtil.isNotBlank(path)) {
+                dirName.setText(path);
+            }
         });
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        ImageView imageView = new ImageView();
+        imageView.setImage(new Image("/img/GitHub.png"));
+        gitHubButton.setGraphic(imageView);
+    }
+
+    @FXML
+    public void toGitHub(ActionEvent event) throws URISyntaxException, IOException {
+        Desktop.getDesktop().browse(new URI("https://github.com/haiCheng-76/db_doc"));
     }
 }

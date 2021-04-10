@@ -14,10 +14,12 @@ import java.util.Objects;
  * @time: 2021/4/5 下午 03:28
  */
 public class Main extends Application {
+
+
     @Override
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("fxml/main.fxml")));
-        primaryStage.setTitle("MySQL Doc");
+        primaryStage.setTitle("db_doc");
         primaryStage.setScene(new Scene(root, 800, 600));
         primaryStage.setFullScreen(false);
         primaryStage.show();

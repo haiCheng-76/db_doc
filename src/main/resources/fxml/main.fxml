@@ -20,11 +20,12 @@
                     <Image url="@../img/logo.png" />
                 </image>
             </ImageView>
-            <ImageView disable="true" fitHeight="32.0" fitWidth="32.0" layoutX="159.0" layoutY="568.0" pickOnBounds="true" preserveRatio="true">
-                <image>
-                    <Image url="@../img/GitHub.png" />
-                </image>
-            </ImageView>
+<!--            <ImageView fx:id="github" disable="true" fitHeight="32.0" fitWidth="32.0" layoutX="159.0" layoutY="568.0" pickOnBounds="true" preserveRatio="true">-->
+<!--                <image>-->
+<!--                    <Image url="@../img/GitHub.png" />-->
+<!--                </image>-->
+<!--            </ImageView>-->
+         <Button fx:id="gitHubButton" layoutX="159.0" layoutY="560.0" mnemonicParsing="false" onAction="#toGitHub" style="-fx-background-color: #03A9F4 #03A9F4;" />
         </children>
     </Pane>
     <Label layoutX="400.0" layoutY="50.0" text="类型" textFill="#212121">
